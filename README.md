@@ -83,7 +83,9 @@ The bot will begin analyzing your wallet and market data, and execute swaps base
 - 🔄 Jupiter Aggregator SDK — token swap routing  
 - 👛 Phantom Wallet — transaction signing  
 - 📊 CoinGecko API — real-time crypto pricing  
-- 🐍 Python  
+- 🐍 Python
+
+- (Video)[https://www.youtube.com/watch?v=3HMYXgb88Uw]
 
 ---
 
