@@ -39,7 +39,6 @@ async def trade(source_asset: str, target_asset: str, amount: float):
         secret = json.load(f)
         private_key = Keypair.from_secret_key(bytes(secret))
 
-    
         async_client = AsyncClient(SOLANA_RPC_URL)
         jupiter = Jupiter(
             async_client=async_client,
