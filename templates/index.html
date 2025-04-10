@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crypto Wallet</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f9f9f9;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+        }
+
+        header {
+            background-color: #333;
+            color: white;
+            padding: 1rem 0;
+            margin-bottom: 20px;
+        }
+
+        .refresh-message {
+            font-size: 0.9rem;
+            color: #888;
+            margin-top: -15px;
+            margin-bottom: 10px;
+        }
+
+        .wallet {
+            background: #fff;
+            margin: 0 auto;
+            padding: 20px;
+            border-radius: 10px;
+            width: 90%;
+            max-width: 800px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h1, h2 {
+            margin: 0.5em 0;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+
+        th {
+            background-color: #f2f2f2;
+        }
+
+        th, td {
+            padding: 12px;
+            border-bottom: 1px solid #ddd;
+        }
+
+        tr:hover {
+            background-color: #f9f9f9;
+        }
+
+        @media (max-width: 600px) {
+            th, td {
+                padding: 8px;
+            }
+        }
+    </style>
+    <script>
+        setInterval(function () {
+            location.reload();
+        }, 10000); // Refresh every 10 seconds
+    </script>
+</head>
+<body>
+    <header>
+        <h1>Crypto Wallet Overview</h1>
+        <div class="refresh-message">Auto-refresh every 10 seconds</div>
+    </header>
+    
+    <div class="wallet">
+        <h2>Total Value: ${{ wallet_amount | round(2) }}</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Asset</th>
+                    <th>Balance</th>
+                    <th>Variation 1h (%)</th>
+                    <th>Value ($)</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for asset, data in composition.items() %}
+                <tr>
+                    <td>{{ asset }}</td>
+                    <td>{{ data.balance | round(4) if data.balance is not none else 'N/A' }}</td>
+                    <td>
+                        {% if data.variation is not none %}
+                            {{ data.variation | round(2) }}%
+                        {% else %}
+                            N/A
+                        {% endif %}
+                    </td>
+                    <td>
+                        {% if data.usd_value is not none %}
+                            ${{ data.usd_value | round(2) }}
+                        {% else %}
+                            N/A
+                        {% endif %}
+                    </td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>        
+    </div>
+</body>
+</html>

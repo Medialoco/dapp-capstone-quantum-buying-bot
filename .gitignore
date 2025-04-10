@@ -1,0 +1,59 @@
+# ---------------------
+# Node.js & Hardhat
+# ---------------------
+node_modules/
+.env
+.cache/
+artifacts/
+coverage/
+coverage.json
+typechain/
+typechain-types/
+ignition/deployments/chain-31337
+
+# ---------------------
+# Python
+# ---------------------
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.pkl
+*.egg-info/
+*.egg
+.env/
+venv/
+ENV/
+env/
+
+# ---------------------
+# Cryptographic & Key Files
+# ---------------------
+phantom_keypair.json
+*.pem
+*.key
+*.der
+*.crt
+*.asc
+id_rsa*
+*.secrets.json
+
+# ---------------------
+# OS / Editor specific
+# ---------------------
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+*.log
+*.swp
+
+# ---------------------
+# Output files
+# ---------------------
+*.bak
+*.out
+*.tmp
+*.log
+quantum_event.json
+quantum_proof.json
