@@ -57,7 +57,7 @@ Place this file in the root directory of the project.
    Open the file `data_fetcher.py` and locate the line:
 
 ```python
-COINGECKO_API_KEY = "your-api-key-here"
+API_KEY = "your-api-key-here"
 ```
 
 Replace `"your-api-key-here"` with your actual CoinGecko API key.
