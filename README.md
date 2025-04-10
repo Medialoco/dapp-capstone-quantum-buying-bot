@@ -85,7 +85,9 @@ The bot will begin analyzing your wallet and market data, and execute swaps base
 - 📊 CoinGecko API — real-time crypto pricing  
 - 🐍 Python
 
-- (Video)[https://www.youtube.com/watch?v=3HMYXgb88Uw]
+---
+
+- [Video]([https://link-url-here.org](https://www.youtube.com/watch?v=3HMYXgb88Uw))
 
 ---
 
