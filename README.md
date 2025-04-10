@@ -87,7 +87,7 @@ The bot will begin analyzing your wallet and market data, and execute swaps base
 
 ---
 
-- [Video]([https://link-url-here.org](https://www.youtube.com/watch?v=3HMYXgb88Uw))
+- [Video](https://www.youtube.com/watch?v=3HMYXgb88Uw)
 
 ---
 
